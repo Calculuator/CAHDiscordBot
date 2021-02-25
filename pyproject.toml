@@ -7,6 +7,10 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.0.1"
+pandas = "^1.2.2"
+flask = "^1.1.2"
+xlrd = "^2.0.1"
+openpyxl = "^3.0.6"
 
 [tool.poetry.dev-dependencies]
 

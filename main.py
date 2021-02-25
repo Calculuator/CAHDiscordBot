@@ -1,7 +1,12 @@
 import discord
 import os
+from keep_alive import keep_alive
+import pandas as pd
+import openpyxl
 
 client = discord.Client()
+
+df = pd.read_excel('CardsAgainstHumanitySheet.xlsx')
 
 @client.event
 async def on_ready():
@@ -13,6 +18,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+        await message.channel.send(df)
 
+keep_alive()
 client.run(os.getenv('TOKEN'))
